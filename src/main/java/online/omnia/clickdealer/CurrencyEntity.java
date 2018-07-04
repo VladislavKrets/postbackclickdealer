@@ -1,0 +1,46 @@
+package online.omnia.clickdealer;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+/**
+ * Created by lollipop on 20.09.2017.
+ */
+@Entity
+@Table(name = "currency")
+public class CurrencyEntity {
+    @Id
+    @Column(name = "id")
+    private int id;
+    @Column(name = "code")
+    private String code;
+    @Column(name = "descriptions")
+    private String descriptions;
+    @Column(name = "sync")
+    private int sync;
+    @Column(name = "count")
+    private Integer count;
+
+
+    public int getId() {
+        return id;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public String getDescriptions() {
+        return descriptions;
+    }
+
+    public int getSync() {
+        return sync;
+    }
+
+    public Integer getCount() {
+        return count;
+    }
+}
